@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hero Section</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Lato', sans-serif;
+        }
+
+        .hero-title {
+            font-size: clamp(2rem, 8vw, 4rem);
+            line-height: 1.1;
+        }
+
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: clamp(1.75rem, 10vw, 2.5rem);
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-white min-h-screen">
+    <!-- Container principal avec les dimensions de la maquette -->
+    <div class="w-full max-w-[1440px] mx-auto relative">
+        <!-- Section principale avec Hero + Stats -->
+        <section class="flex flex-col lg:flex-row px-4 sm:px-8 lg:pl-16 pt-16 sm:pt-24 lg:pt-32 pb-8 lg:pb-16 gap-8 lg:gap-10">
+            <!-- Section Hero -->
+            <div class="w-full lg:max-w-[556px] flex flex-col gap-6 lg:gap-8">
+                <!-- Titre principal -->
+                <div class="flex flex-col gap-2 lg:gap-3">
+                    <h1 class="hero-title font-bold text-[#333333] opacity-0 translate-y-8" id="title-line-1">
+                        Design. Think.
+                    </h1>
+                    <h1 class="hero-title font-bold text-[#333333] opacity-0 translate-y-8" id="title-line-2">
+                        Solve. Develop.
+                    </h1>
+                </div>
+
+                <!-- Texte descriptif -->
+                <p class="text-lg sm:text-xl lg:text-2xl leading-6 sm:leading-7 lg:leading-8 text-[#333333] max-w-[495px] opacity-0 translate-y-8" id="description">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cursus imperdiet sed id elementum. Quam vel
+                    aliquam sit vulputate.
+                </p>
+
+                <!-- Bouton CTA -->
+                <button
+                    class="w-fit bg-[#333333] text-white px-8 sm:px-12 lg:px-14 py-4 sm:py-5 lg:py-6 rounded-[40px] text-lg sm:text-xl lg:text-[22px] font-medium leading-[18px] hover:bg-[#555555] transition-colors duration-300 opacity-0 translate-y-8"
+                    id="cta-button">
+                    Get started
+                </button>
+            </div>
+
+            <!-- Section Stats/Features -->
+            <div class="w-full lg:w-[676px] flex flex-col gap-6 lg:gap-0 lg:ml-auto lg:mr-16">
+                <div class="flex flex-col sm:flex-row lg:flex-row gap-6 lg:gap-10">
+                    <!-- Colonne gauche -->
+                    <div class="w-full sm:w-1/2 lg:w-[318px] flex flex-col gap-8 sm:gap-12 lg:gap-[78px]">
+                        <!-- Item 1 -->
+                        <div class="w-full lg:w-[318px] flex items-center gap-4 lg:gap-8 opacity-0 translate-x-8" id="stat-item-1">
+                            <!-- Placeholder pour image 1 (icône coeur bleu) -->
+                            <div class="w-12 h-12 sm:w-16 sm:h-16 lg:w-[76px] lg:h-[76px] bg-[#4A90E2] rounded-xl lg:rounded-2xl flex items-center justify-center flex-shrink-0">
+                                <!-- Remplacer par votre image exportée -->
+                                <img src="img/10.png" alt="">
+                            </div>
+                            <div class="flex-1 min-w-0">
+                                <h3 class="text-xl sm:text-2xl lg:text-[32px] font-bold text-[#333333] leading-tight">168</h3>
+                                <p class="text-sm sm:text-base lg:text-[16px] text-[#666666] leading-4 sm:leading-5">Lorem ipsum dolor sit amet, consectetur
+                                    adipiscing elit.</p>
+                            </div>
+                        </div>
+
+                        <!-- Item 2 -->
+                        <div class="w-full lg:w-[318px] flex items-center gap-4 lg:gap-8 opacity-0 translate-x-8" id="stat-item-2">
+                            <!-- Placeholder pour image 2 (étoile jaune) -->
+                            <div class="w-12 h-12 sm:w-16 sm:h-16 lg:w-[76px] lg:h-[76px] bg-[#F5C842] rounded-xl lg:rounded-2xl flex items-center justify-center flex-shrink-0">
+                                <!-- Remplacer par votre image exportée -->
+                                <img src="img/6.png" alt="">
+                            </div>
+                            <div class="flex-1 min-w-0">
+                                <h3 class="text-xl sm:text-2xl lg:text-[32px] font-bold text-[#333333] leading-tight">425+</h3>
+                                <p class="text-sm sm:text-base lg:text-[16px] text-[#666666] leading-4 sm:leading-5">Lorem ipsum dolor sit amet, consectetur
+                                    adipiscing elit.</p>
+                            </div>
+                        </div>
+
+                        <!-- Item 3 -->
+                        <div class="w-full lg:w-[318px] flex items-center gap-4 lg:gap-8 opacity-0 translate-x-8" id="stat-item-3">
+                            <!-- Placeholder pour image 3 (horloge violette) -->
+                            <div class="w-12 h-12 sm:w-16 sm:h-16 lg:w-[76px] lg:h-[76px] bg-[#9B59B6] rounded-xl lg:rounded-2xl flex items-center justify-center flex-shrink-0">
+                                <!-- Remplacer par votre image exportée -->
+                                <img src="img/5.png" alt="">
+                            </div>
+                            <div class="flex-1 min-w-0">
+                                <h3 class="text-xl sm:text-2xl lg:text-[32px] font-bold text-[#333333] leading-tight">316</h3>
+                                <p class="text-sm sm:text-base lg:text-[16px] text-[#666666] leading-4 sm:leading-5">Lorem ipsum dolor sit amet, consectetur
+                                    adipiscing elit.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Colonne droite -->
+                    <div class="w-full sm:w-1/2 lg:w-[318px] flex flex-col gap-8 sm:gap-12 lg:gap-[78px]">
+                        <!-- Item 4 -->
+                        <div class="w-full lg:w-[318px] flex items-center gap-4 lg:gap-8 opacity-0 translate-x-8" id="stat-item-4">
+                            <!-- Placeholder pour image 4 (document rose) -->
+                            <div class="w-12 h-12 sm:w-16 sm:h-16 lg:w-[76px] lg:h-[76px] bg-[#FF9AAB] rounded-xl lg:rounded-2xl flex items-center justify-center flex-shrink-0">
+                                <!-- Remplacer par votre image exportée -->
+                                <img src="img/7.png" alt="">
+                            </div>
+                            <div class="flex-1 min-w-0">
+                                <h3 class="text-xl sm:text-2xl lg:text-[32px] font-bold text-[#333333] leading-tight">Title 1</h3>
+                                <p class="text-sm sm:text-base lg:text-[16px] text-[#666666] leading-4 sm:leading-5">Lorem ipsum dolor sit amet, consectetur
+                                    adipiscing elit.</p>
+                            </div>
+                        </div>
+
+                        <!-- Item 5 -->
+                        <div class="w-full lg:w-[318px] flex items-center gap-4 lg:gap-8 opacity-0 translate-x-8" id="stat-item-5">
+                            <!-- Placeholder pour image 5 (graphique vert) -->
+                            <div class="w-12 h-12 sm:w-16 sm:h-16 lg:w-[76px] lg:h-[76px] bg-[#2ECC71] rounded-xl lg:rounded-2xl flex items-center justify-center flex-shrink-0">
+                                <!-- Remplacer par votre image exportée -->
+                                <img src="img/8.png" alt="">
+                            </div>
+                            <div class="flex-1 min-w-0">
+                                <h3 class="text-xl sm:text-2xl lg:text-[32px] font-bold text-[#333333] leading-tight">Title 2</h3>
+                                <p class="text-sm sm:text-base lg:text-[16px] text-[#666666] leading-4 sm:leading-5">Lorem ipsum dolor sit amet, consectetur
+                                    adipiscing elit.</p>
+                            </div>
+                        </div>
+
+                        <!-- Item 6 -->
+                        <div class="w-full lg:w-[318px] flex items-center gap-4 lg:gap-8 opacity-0 translate-x-8" id="stat-item-6">
+                            <!-- Placeholder pour image 6 (bookmark turquoise) -->
+                            <div class="w-12 h-12 sm:w-16 sm:h-16 lg:w-[76px] lg:h-[76px] bg-[#1ABC9C] rounded-xl lg:rounded-2xl flex items-center justify-center flex-shrink-0">
+                                <!-- Remplacer par votre image exportée -->
+                                <img src="img/9.png" alt="">
+                            </div>
+                            <div class="flex-1 min-w-0">
+                                <h3 class="text-xl sm:text-2xl lg:text-[32px] font-bold text-[#333333] leading-tight">Title 3</h3>
+                                <p class="text-sm sm:text-base lg:text-[16px] text-[#666666] leading-4 sm:leading-5">Lorem ipsum dolor sit amet, consectetur
+                                    adipiscing elit.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Cards avec images de fond -->
+        <section class="px-4 sm:px-8 lg:px-16 pb-8 lg:pb-16">
+            <div class="w-full max-w-[1312px] mx-auto flex flex-col sm:flex-row sm:flex-wrap lg:flex-nowrap gap-4 sm:gap-0 rounded-2xl lg:rounded-[32px] overflow-hidden opacity-0 translate-y-8"
+                id="cards-section">
+                <!-- Card 1 - Cerveau -->
+                <div class="relative w-full sm:w-1/2 lg:w-[328px] h-48 sm:h-56 lg:h-[283px] group cursor-pointer">
+                    <!-- Background image placeholder -->
+                    <div class="absolute inset-0">
+                        <img src="img/4.jpg" class="w-full h-full object-cover" alt="Cerveau">
+                    </div>
+
+                    <!-- Overlay gradient -->
+                    <div
+                        class="absolute bottom-0 left-0 right-0 h-16 sm:h-20 lg:h-[86px] bg-gradient-to-t from-black/37 to-transparent">
+                    </div>
+
+                    <!-- Texte -->
+                    <div class="absolute bottom-4 sm:bottom-6 left-0 right-0 px-4 sm:px-8 lg:px-[53px]">
+                        <p class="text-white text-center text-sm sm:text-base lg:text-[16px] leading-tight lg:leading-[100%] font-normal">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Card 2 - Cylindres -->
+                <div class="relative w-full sm:w-1/2 lg:w-[328px] h-48 sm:h-56 lg:h-[283px] group cursor-pointer">
+                    <!-- Background image placeholder -->
+                    <div class="absolute inset-0">
+                        <img src="img/3.jpg" class="w-full h-full object-cover" alt="Cylindres">
+                    </div>
+
+                    <!-- Overlay gradient -->
+                    <div
+                        class="absolute bottom-0 left-0 right-0 h-16 sm:h-20 lg:h-[86px] bg-gradient-to-t from-black/37 to-transparent">
+                    </div>
+
+                    <!-- Texte -->
+                    <div class="absolute bottom-4 sm:bottom-6 left-0 right-0 px-4 sm:px-8 lg:px-[53px]">
+                        <p class="text-white text-center text-sm sm:text-base lg:text-[16px] leading-tight lg:leading-[100%] font-normal">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Card 3 - Formes roses -->
+                <div class="relative w-full sm:w-1/2 lg:w-[328px] h-48 sm:h-56 lg:h-[283px] group cursor-pointer">
+                    <!-- Background image placeholder -->
+                    <div class="absolute inset-0 bg-gradient-to-br from-[#fce7f3] to-[#f3e8ff]">
+                        <!-- Remplacer par votre image de formes roses -->
+                        <div class="absolute inset-0">
+                            <img src="img/2.jpg" class="w-full h-full object-cover" alt="Formes roses">
+                        </div>
+                    </div>
+
+                    <!-- Overlay gradient -->
+                    <div
+                        class="absolute bottom-0 left-0 right-0 h-16 sm:h-20 lg:h-[86px] bg-gradient-to-t from-black/37 to-transparent">
+                    </div>
+
+                    <!-- Texte -->
+                    <div class="absolute bottom-4 sm:bottom-6 left-0 right-0 px-4 sm:px-8 lg:px-[53px]">
+                        <p class="text-white text-center text-sm sm:text-base lg:text-[16px] leading-tight lg:leading-[100%] font-normal">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Card 4 - Brackets code -->
+                <div class="relative w-full sm:w-1/2 lg:w-[328px] h-48 sm:h-56 lg:h-[283px] group cursor-pointer">
+                    <!-- Background image placeholder -->
+                    <div class="absolute inset-0 bg-gradient-to-br from-[#f1f5f9] to-[#e2e8f0]">
+                        <!-- Remplacer par votre image de brackets -->
+                        <div class="absolute inset-0">
+                            <img src="img/1.jpg" class="w-full h-full object-cover" alt="Brackets code">
+                        </div>
+                    </div>
+
+                    <!-- Overlay gradient -->
+                    <div
+                        class="absolute bottom-0 left-0 right-0 h-16 sm:h-20 lg:h-[86px] bg-gradient-to-t from-black/37 to-transparent">
+                    </div>
+
+                    <!-- Texte -->
+                    <div class="absolute bottom-4 sm:bottom-6 left-0 right-0 px-4 sm:px-8 lg:px-[53px]">
+                        <p class="text-white text-center text-sm sm:text-base lg:text-[16px] leading-tight lg:leading-[100%] font-normal">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        // Animation GSAP au chargement de la page
+        document.addEventListener('DOMContentLoaded', function () {
+            // Timeline pour orchestrer les animations
+            const tl = gsap.timeline();
+
+            // Animation du titre ligne par ligne
+            tl.to("#title-line-1", {
+                opacity: 1,
+                y: 0,
+                duration: 0.8,
+                ease: "power2.out"
+            })
+                .to("#title-line-2", {
+                    opacity: 1,
+                    y: 0,
+                    duration: 0.8,
+                    ease: "power2.out"
+                }, "-=0.4")
+                .to("#description", {
+                    opacity: 1,
+                    y: 0,
+                    duration: 0.8,
+                    ease: "power2.out"
+                }, "-=0.4")
+                .to("#cta-button", {
+                    opacity: 1,
+                    y: 0,
+                    duration: 0.8,
+                    ease: "power2.out"
+                }, "-=0.4")
+                // Animation des items de stats avec décalage
+                .to("#stat-item-1", {
+                    opacity: 1,
+                    x: 0,
+                    duration: 0.6,
+                    ease: "power2.out"
+                }, "-=0.6")
+                .to("#stat-item-2", {
+                    opacity: 1,
+                    x: 0,
+                    duration: 0.6,
+                    ease: "power2.out"
+                }, "-=0.4")
+                .to("#stat-item-3", {
+                    opacity: 1,
+                    x: 0,
+                    duration: 0.6,
+                    ease: "power2.out"
+                }, "-=0.4")
+                .to("#stat-item-4", {
+                    opacity: 1,
+                    x: 0,
+                    duration: 0.6,
+                    ease: "power2.out"
+                }, "-=0.8")
+                .to("#stat-item-5", {
+                    opacity: 1,
+                    x: 0,
+                    duration: 0.6,
+                    ease: "power2.out"
+                }, "-=0.4")
+                .to("#stat-item-6", {
+                    opacity: 1,
+                    x: 0,
+                    duration: 0.6,
+                    ease: "power2.out"
+                }, "-=0.4");
+
+            // Animation hover sur le bouton
+            const button = document.getElementById('cta-button');
+
+            button.addEventListener('mouseenter', function () {
+                gsap.to(button, {
+                    scale: 1.05,
+                    duration: 0.3,
+                    ease: "power2.out"
+                });
+            });
+
+            button.addEventListener('mouseleave', function () {
+                gsap.to(button, {
+                    scale: 1,
+                    duration: 0.3,
+                    ease: "power2.out"
+                });
+            });
+
+            // Animation au clic
+            button.addEventListener('click', function () {
+                gsap.to(button, {
+                    scale: 0.95,
+                    duration: 0.1,
+                    yoyo: true,
+                    repeat: 1,
+                    ease: "power2.inOut"
+                });
+            });
+
+            // Animation hover sur les items de stats
+            const statItems = document.querySelectorAll('[id^="stat-item-"]');
+            statItems.forEach(item => {
+                item.addEventListener('mouseenter', function () {
+                    gsap.to(item, {
+                        scale: 1.02,
+                        duration: 0.3,
+                        ease: "power2.out"
+                    });
+                });
+
+                item.addEventListener('mouseleave', function () {
+                    gsap.to(item, {
+                        scale: 1,
+                        duration: 0.3,
+                        ease: "power2.out"
+                    });
+                });
+            });
+
+            // Animation de la section cards
+            const cardsSection = document.getElementById('cards-section');
+
+            // Observer pour déclencher l'animation quand la section devient visible
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        gsap.to(entry.target, {
+                            opacity: 1,
+                            y: 0,
+                            duration: 1,
+                            ease: "power2.out"
+                        });
+                    }
+                });
+            }, { threshold: 0.3 });
+
+            observer.observe(cardsSection);
+
+            // Animation hover sur les cards
+            const cards = document.querySelectorAll('.group');
+            cards.forEach(card => {
+                card.addEventListener('mouseenter', function () {
+                    gsap.to(card, {
+                        scale: 1.02,
+                        y: -5,
+                        duration: 0.4,
+                        ease: "power2.out"
+                    });
+                });
+
+                card.addEventListener('mouseleave', function () {
+                    gsap.to(card, {
+                        scale: 1,
+                        y: 0,
+                        duration: 0.4,
+                        ease: "power2.out"
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
